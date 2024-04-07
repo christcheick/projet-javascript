@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portail dynamique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+        <h1> portail Dynamique</h1>
+    
+    <div class="button-container">
+        <button id="formul-button"> formulaire de contact</button>
+        <button id="cv-button"> mon cv</button>
+        <button id="photo-button"> photo de mon binome et moi</button>
+        <button id="video-button"> video de presensation</button>
+    </div>    
+        <div id="formul-form" class="hidden">
+            <h2>formulaire de contact</h2>
+            <form>
+                <label for="name">Nom :</label>
+                <input type="text" id="name"name="name" placeholder="nom">
+                <label for="name">Prenom :</label>
+                <input type="text" id="surname" name="name" placeholder="prenom">
+                <label for="telephone"> telephone :</label>
+                <select name="indicatif">
+                    <option value=""> selectionner un indicatif</option>
+                    <option value="+237">+237 (Cameroun)</option>
+                    <option value="+1"> +1 (Canada)</option>
+                    <option value="+216">+216 (Tunisie)</option>
+                    <option value="+40">+40 (Roumanie)</option>
+                </select>
+                <input type="tel" id="telephone" telephone="telephone" placeholder="numrero de telephone">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="email">
+                <label for="message">Message :</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="saisir le message"></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+        <div id="cv" class="hidden">
+            <h2> mon cv</h2>
+             <h1>Christine NGO</h1>
+                <p>teleoperatrice</p>
+            <h2>profil</h2>
+            <p> Je possède 03 années d’expériences dans le service à la clientèle pour des fournisseurs d’Energie a l’instar de TOTAL ENERGIE, ENI, VATTENFALL, ET CDISCOUNT et 1 année en tant que support technique a FINLENCE CONSULTING pour le compte des banques en AFRIQUE comme la BICEC pour le SWIFT.
+            J’ai la maitrise de la suite OFFICE 365(WORD, EXCEL, POWERPOINT, etc..) et une connaissance en informatique en HTML, JAVASCRIPT, C#, HTML etc.
+            </p>
+            <h2>experience Professionnelle</h2>
+            <ul>
+                <li><strong>support technique </strong>,FINLENCE CONSULTING SRL/ RUE CONSTANTIN ARICESCU 18 E,
+                    SECTEUR 1, BUCAREST, ROUMANIE,2022-2023 </li>
+                    <li><strong>TELECONSEILLERE 1WAYCOM</strong>immeuble ENNERSRINE ,61 bis av De l’UMA, Tunis, Tunisie ,
+                    2020-2022</li>
+
+            </ul>
+            <h2>formation</h2>
+            <li><strong>-	BTS en Informatique de gestion</strong>ISTAM (Institut Spécialisé des Technologie Avancées et Management) TUNIS,
+                 TUNISIE,2020-2022 </li>
+            <li><strong>En cours d’obtention du DEC en Programmation web et mobile</strong>2023-2025	INSTITUT TECCART,
+                 MONTREAL (QUEBEC), CANADA, 2023-2025</li>
+                 <h2>competences</h2>
+                 <ul>
+                    <li>suite office 365</li>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>c#</li>
+                    <li>JAVASCRIPT</li>
+                    <li>mysql</li>
+                 </ul>
+                 <h2> langue parlees</h2>
+                 <li> francais (langue maternelles)</li>
+                 <li>italien (niveau B2)</li>
+        </div>
+        <div id="video" class="hidden">
+            <h2>video de presensation</h2>
+             <iframe width="1000 px" height="450px%"  src="video.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="photo" class="hidden">
+            <h2>photo de mon binome et moi</h2>
+            <img src="imgage.jpg" alt="photo de mon binome et moi">
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function showVideo(){
+            document.getElementById("video").classList.remove("hidden");
+            document.getElementById("photo").classList.add("hidden");
+            document.getElementById("cv").classList.add("hidden");
+            document.getElementById("formul-form").classList.add("hidden");
+            
+        }
+        function showPhoto(){
+            document.getElementById("photo").classList.remove("hidden");
+            document.getElementById("video").classList.add("hidden");
+            document.getElementById("cv").classList.add("hidden");
+            document.getElementById("formul-form").classList.add("hidden");
+            
+        }
+        function showCV(){
+            document.getElementById("cv").classList.remove("hidden");
+            document.getElementById("photo").classList.add("hidden");
+            document.getElementById("video").classList.add("hidden");
+            document.getElementById("formul-form").classList.add("hidden");
+            
+        }
+        function showFormulform(){
+            document.getElementById("formul-form").classList.remove("hidden");
+            document.getElementById("photo").classList.add("hidden");
+            document.getElementById("cv").classList.add("hidden");
+            document.getElementById("video").classList.add("hidden");
+            
+        }
+            document.getElementById("video-button").addEventListener("click",function(){
+                showVideo();
+            });
+            document.getElementById("photo-button").addEventListener("click",function(){
+                showPhoto();
+            });
+            document.getElementById("cv-button").addEventListener("click",function(){
+                showCV();
+            });
+            document.getElementById("formul-button").addEventListener("click",function(){
+                showFormulform();
+            });
+
+    </script>
+</body>
+</html>

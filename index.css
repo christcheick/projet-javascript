@@ -1,0 +1,46 @@
+.container{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.hidden{
+    display: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+form label,form input,form textarea{
+    margin-bottom: 10px;
+}
+form button{
+    margin-top: 10px;
+}
+img{
+    width: 800px;
+    height: 450px;
+}
+#formul-button:active{
+background-color: green;
+}
+#cv-button:active{
+    background-color: red;
+
+}
+#photo-button:active{
+    background-color: yellow;
+}
+#video-button:active{
+    background-color: gold;
+}
+body{
+    background-image: url(imgage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
