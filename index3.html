@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Jeu de devinette facile </title>
+    <link rel="stylesheet" href="Ausurvol01.css">
+</head>
+<body>
+
+
+	<h1> 🌟🌍🌟 Jeu de devinette facile 🌟🌍🌟</h1>
+    <p> But du jeu : Réussir à deviner le nombre aléatoire généré entre 1 et 100.</p>
+	<p> Nous avons généré un nombre aleatoire entre 1 et 100. Pouvez-vous deviner lequel?</p>
+
+	<form id="formeDevinette">
+		<label for="numberInput"> Entrez votre devinette:</label>
+		&nbsp;&nbsp;  <input id="numberInput" type="number" min="1" max="100">
+		&nbsp;&nbsp;<button id="s" type="submit"> Verifier </button>
+	</form>
+	<p id="resultat"> </p>
+
+	<script>
+        // On declare et on les range dans des variables 
+		var formeDevinette = document.getElementById('formeDevinette');
+		var numnerInput = document.getElementById('numberInput');
+		var resultat = document.getElementById('resultat');
+
+        // En résumé, la variable nombreAleatoire contient un nombre entier aléatoire entre 1 et 100 (inclus) grâce à la combinaison de Math.random(), la multiplication pour élargir la plage de nombres, le plafonnement avec Math.floor() pour obtenir un nombre entier, et l'ajout de 1 pour ajuster la plage de 1 à 100.
+        //  une variable appelée nombreAleatoire qui contient un nombre aléatoire compris entre 1 et 100 (inclus).
+        var nombreAleatoire = Math.floor(Math.random() * 100 + 1) ;
+
+        //guessForm.addEventListener('submit', function(e) { ... }) : Cette ligne ajoute un écouteur d'événements de type "submit" au formulaire avec l'identifiant guessForm. Lorsque le formulaire est soumis, la fonction anonyme spécifiée entre les accolades est exécutée.
+		//e.preventDefault(); : Cette instruction est appelée dans la fonction qui est exécutée lorsque le formulaire est soumis. Elle empêche le comportement par défaut du formulaire, qui serait de recharger la page ou de soumettre les données à un serveur distant.
+        
+        //Une fonction anonyme pour comparer le nombre  entre par l'utilisateur et le nombre aleatoire
+        formeDevinette.addEventListener('submit', function(e) {
+		  e.preventDefault();
+		  s.addEventListener('click',function () {
+			this.style.color = 'white';
+			this.style.fontWeight = 'bold';
+			this.style.backgroundColor = 'blue';
+		  })
+		  var devinetteUtilisateur = Number(numberInput.value); //On compare les valeurs 
+		  if (devinetteUtilisateur == nombreAleatoire) {
+		    resultat.textContent = 'Felicitations ! votre devinette est correcte !';
+		  } else if (  devinetteUtilisateur < nombreAleatoire) {
+		    resultat.textContent = 'Indice : Le nombre à deviner est plus grand. Essayez encore !';
+		  } else if (devinetteUtilisateur > nombreAleatoire  ) {
+		    resultat.textContent = 'Indice : Le nombre à deviner est moins grand. Essayez encore !';
+		  }
+		});
+	</script>
+</body>
+</html>

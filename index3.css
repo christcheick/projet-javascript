@@ -1,0 +1,44 @@
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+#formeDevinette {
+    text-align: center;
+    width: 500px;
+    margin : 0 auto;
+    background: skyblue;
+    padding:100px 50px;
+    display: flex;
+    justify-content:center;
+    border-radius: 15px;
+    position: relative;
+
+}
+
+
+button {
+    border : 0;
+    background: blanchedalmond;
+    color: grey;
+    border-radius:5px;
+    padding : 0 10px 0 20px;
+    
+}
+
+#s {
+    padding : 8px 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#s {
+    background-color: violet;
+}
+
